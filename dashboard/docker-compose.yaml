@@ -1,4 +1,4 @@
-version: '3'
+# version: '3'
 
 volumes:
   logs:
@@ -10,6 +10,17 @@ networks:
   loki:
 
 services:
+  adguardhome:
+    container_name: adguardhome
+    build:
+      context: ./adguardhome/docker
+    image: adguard/adguardhome
+    volumes:
+      - ./adguardhome/workdir:/opt/adguardhome/work
+      - ./adguardhome/confdir:/opt/adguardhome/conf
+    restart: always
+    network_mode: host
+    
   mosdns:
     container_name: mosdns
     build:
