@@ -6,3 +6,10 @@ unofficial mosdns docker image
 
 详情见 /dashboard/README.md
 - 将 [vector + loki 实现 mosdns 数据看板](https://icyleaf.com/2023/08/using-vector-transform-mosdns-logging-to-grafana-via-loki/#prometheus) 整合为了 docker-compose,方便部署.
+- 本版本调整内容如下：
+  - 增加adguardhome做为DNS内部接入服务（53 TCP/UDP）；上游为MOSDNS（6553 TCP/UDP）；
+  - adguardhome采用官方镜像，添加我常用的国内过滤规则。
+  - 全部使用Docker容器部署。
+  - 更新时间：2024年11月5日  
+- 
+  
