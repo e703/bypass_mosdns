@@ -47,7 +47,7 @@ RUN chmod a+x /entrypoint.sh
   # && apk del curl
 
 VOLUME /etc/mosdns
-EXPOSE 53/udp 53/tcp
+EXPOSE 6553/udp 6553/tcp
 # CMD /usr/bin/mosdns start --dir /etc/mosdns
 
 ENTRYPOINT [ "/entrypoint.sh" ]
